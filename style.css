@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #413d3d;
+    background-color: #ece9e9;
+}
+
+hr {
+    width: 90%;
+}
+
+.wrapper {
+    max-width: 1200px ;
+    padding-right: 20px;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 0.5fr 1fr auto auto auto auto 1fr;
+    grid-template-areas: 
+    "photo name"
+    "photo contacts_value"
+    "left_position position_value"
+    "left_work work_value"
+    "left_education education_value"
+    "skills skills_description"
+    "left_portfolio portfolio"
+    "left_intro intro";
+}
+
+#left_contacts {
+    grid-area: left_contacts;
+}
+
+#left_position {
+    grid-area: left_position;
+}
+
+#left_work {
+    grid-area: left_work;
+}
+
+#left_education {
+    grid-area: left_education;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#left_portfolio {
+    grid-area: left_portfolio;
+}
+
+#left_intro {
+    grid-area: left_intro;
+}
+
+#contacts {
+    grid-area: contacts_value;
+}
+
+#position {
+    grid-area: position_value;
+}
+
+#work {
+    grid-area: work_value;
+}
+
+#education {
+    grid-area: education_value;
+}
+
+#skills_description {
+    grid-area: skills_description;
+}
+
+#portfolio {
+    grid-area: portfolio;
+}
+
+#intro {
+    grid-area: intro;
+}
+
+#position_320px {
+    display: none;
+}
+
+.profile_img {
+    grid-area: photo;
+    background-color: #93cbcc;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.profile_img img {
+    width: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.header_text {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.header_text h3 {
+    margin-bottom: 0;
+}
+
+#left_contacts, #left_position, #left_work, 
+#left_education, #skills, #left_portfolio, #left_intro {
+    background-color: #93cbcc;
+    margin: 0;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#left_work h3, 
+#left_education h3, #skills h3{
+    margin: 6px;
+}
+
+.contacts_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 20px;
+}
+
+.contact {
+    font-size: 0.8rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h4 {
+    margin-bottom: 0;
+}
+/* .contacts__row, .contacts__value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+} */
+
+/* .contacts__row p, .contacts__value p {
+    display: inline;
+    margin: 0;
+    font-size: 0.7rem;
+} */
+
+#position, #work, #education, 
+#skills_description, #portfolio, #intro {
+    padding-left: 20px;
+    text-align: start;
+}
+
+#work p, #education p {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+#work h3, #work h5, #education h3, #education h5,
+#left_work p, #left_education p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.list_responsibilities {
+    font-size: 0.8rem;
+}
+
+.list_skills {
+    padding-left: 20px;
+}
+
+.list_skills li{
+    font-size: 1rem;
+    margin: 6px 0;
+}
+
+#skills_description p, #intro p, .portfolio_project p {
+    font-size: 0.8rem;
+}
+
+.portfolio_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio_img img{
+    height: 200px;
+    object-fit: contain;
+}
+
+.git_link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #5d8e8f;
+}
+
+.git_link p:hover {
+    color: #93cbcc;
+}
+
+.git_link img {
+    width: 30px;
+}
+
+
+
+.portfolio_project_header {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+    .contacts_wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "name"
+        "photo" 
+        "contacts_value"
+        "left_position" 
+        "position_value"
+        "left_work" 
+        "work_value"
+        "left_education" 
+        "education_value"
+        "skills" 
+        "skills_description"
+        "left_portfolio" 
+        "portfolio"
+        "left_intro"
+        "intro";
+    }
+
+    .header_text h3{
+        text-align: center;
+    }
+
+    .profile_img {
+        background-color: #ece9e9;
+        padding: 0;
+    }
+
+    .profile_img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        border: 4px #5d8e8f solid;
+    }
+
+    #left_position, #position {
+        display: none;
+    }
+    
+    #position_320px {
+        display: block;
+        font-size: 0.8rem;
+        padding: 0 20px;
+    }
+}

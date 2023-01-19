@@ -143,6 +143,15 @@ hr {
 .contact h4 {
     margin-bottom: 0;
 }
+
+.contact a {
+    text-decoration: none;
+    color: #5d8e8f;
+}
+
+.contact a:hover {
+    color: #93cbcc;
+}
 /* .contacts__row, .contacts__value {
     display: flex;
     flex-direction: row;
@@ -208,6 +217,7 @@ hr {
     flex-direction: row;
     text-decoration: none;
     color: #5d8e8f;
+    align-items: center;
 }
 
 .git_link p:hover {
@@ -216,6 +226,7 @@ hr {
 
 .git_link img {
     width: 30px;
+    height: 30px;
 }
 
 
